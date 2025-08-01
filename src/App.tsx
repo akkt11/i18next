@@ -8,10 +8,21 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
 
   const handleChangeLanguage = () => {
-    const newLanguage = i18n.language === "ru" ? "en" : "ru";
+    let language;
 
-    i18n.changeLanguage(newLanguage);
+    if (i18n.language === "ru") {
+      language = "en";
+    } else if (i18n.language === "en") {
+      language = "es";
+    } else {
+      language = "ru";
+    }
+
+    // const newLanguage = i18n.language === "ru" ? "en" : "ru";
+    i18n.changeLanguage(language);
   };
+
+  console.log("i18n.store.data", i18n.store.data);
 
   return (
     <div className="container">
@@ -23,7 +34,7 @@ function App() {
       <div>
         <button onClick={handleChangeLanguage}>{t("changeLang")}</button>
         <button onClick={() => setShowAbout((prev) => !prev)}>
-          {t("changeLang")}
+          show About page
         </button>
       </div>
     </div>

@@ -20,11 +20,12 @@ i18n
     //     translation: en,
     //   },
     // },
+    debug: true,
     lng: "ru",
     fallbackLng: ["en"],
     // ns: ["about", "main"],
     backend: {
-      loadPath: "../public/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/public/locales/{{lng}}/{{ns}}.json",
     },
   });
 
