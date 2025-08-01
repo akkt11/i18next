@@ -22,7 +22,7 @@ i18n
     // },
     lng: "ru",
     fallbackLng: ["en"],
-    ns: ["about", "main"],
+    // ns: ["about", "main"],
     backend: {
       loadPath: "../public/locales/{{lng}}/{{ns}}.json",
     },
