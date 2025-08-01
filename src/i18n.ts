@@ -12,7 +12,6 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: "ru",
     // resources: {
     //   ru: {
     //     translation: ru,
@@ -21,6 +20,8 @@ i18n
     //     translation: en,
     //   },
     // },
+    lng: "ru",
+    fallbackLng: ["en"],
     ns: ["about", "main"],
     backend: {
       loadPath: "../public/locales/{{lng}}/{{ns}}.json",
